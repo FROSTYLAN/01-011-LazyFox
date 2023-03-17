@@ -1,4 +1,4 @@
-import { registerImage } from "./lazy";
+import { registerImage, desregisterImages } from "./lazy";
 
 const min = 1;
 const max = 122;
@@ -9,9 +9,9 @@ const createImageNode = () => {
   container.className = "p-4";
 
   const imagen = document.createElement("img");
-  imagen.className = "mx-auto";
+  imagen.className = "mx-auto bg-gray-200 rounded-xl";
   imagen.width = "320";
-  imagen.src = `https://randomfox.ca/images/${random()}.jpg`;
+  imagen.dataset.src = `https://randomfox.ca/images/${random()}.jpg`;
 
   container.appendChild(imagen);
 
@@ -19,7 +19,8 @@ const createImageNode = () => {
 };
 
 const mountNode = document.getElementById("images");
-const addButton = document.querySelector("button");
+const addButton = document.querySelector(".add-btn");
+const cleanButton = document.querySelector(".clean-btn");
 
 const addImage = () => {
   const newImage = createImageNode();
@@ -27,4 +28,10 @@ const addImage = () => {
   registerImage(newImage);
 };
 
+const cleanImages = () => {
+  mountNode.innerHTML = "";
+  desregisterImages();
+};
+
 addButton.addEventListener("click", addImage);
+cleanButton.addEventListener("click", cleanImages);
