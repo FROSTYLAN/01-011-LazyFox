@@ -23,38 +23,63 @@
     <title>Snowpack & Tailwind App</title>
   </head>
   <body>
-    <!--
-      This HTML file is a template.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-
-      Start modyfing from here.
-    -->
-    <div class="py-10 max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="pt-10 pb-4 px-4 sm:px-6 lg:px-8">
       <div class="text-center">
         <p
           class="text-base leading-6 text-indigo-600 font-semibold tracking-wide uppercase"
         >
-          Snowpack
+          Platzi Manipulación DOM
         </p>
         <h3
           class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl sm:leading-10"
         >
-          Tailwind template
+          Lazy loading
         </h3>
-        <p class="mt-4 max-w-2xl text-xl leading-7 text-gray-500 mx-auto">
-          Use this template to build awesome websites using Snowpack and
-          Tailwind. It also includes Prettier and automatic publish to GitHub
-          pages using GitHub Actions. Learn more:
-        </p>
-        <button class="add-btn p-3 block m-auto bg-blue-200 mb-4 mt-4">
-          Agregar Imagen
-        </button>
-        <button class="clean-btn p-3 block m-auto bg-red-300">Limpiar</button>
-        <div id="images"></div>
+        <div class="max-w-xl mx-auto text-xl text-gray-500 leading-7">
+          <p class="mt-4">
+            Plugin en vanilla JavaScript para cargar imágenes con lazy load.
+          </p>
+          <p class="mt-4">✨✨</p>
+          <p class="mt-4">
+            Las imágenes agregadas no se descargarán hasta que sean visibles en
+            la pantalla
+          </p>
+          <p class="mt-4">✨✨</p>
+        </div>
       </div>
     </div>
+    <fieldset class="text-center">
+      <p class="p-3">
+        <legend class="mx-auto text-sm text-gray-500">
+          Agrega una nueva imagen al final de la lista
+        </legend>
+      </p>
+      <button
+        type="submit"
+        class="py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+      >
+        Agregar Imagen
+      </button>
+      <p class="mt-4">
+        <button
+          type="reset"
+          class="font-medium text-indigo-600 hover:text-indigo-500"
+        >
+          Limpiar
+        </button>
+      </p>
+    </fieldset>
+    <div class="mt-4" id="images"></div>
+    <footer class="text-center mt-48 p-6 text-sm text-gray-500">
+      <p>
+        Powered by
+        <a href="https://randomfox.ca" target="_blank">https://randomfox.ca</a>
+        | Made by
+        <a href="https://portfolio-charls-castillo.netlify.app/">@Frosty</a>
+        for
+        <a href="https://twitter.com/platzi">@platzi</a>
+      </p>
+    </footer>
 
     <!-- Add more scripts here -->
     <script type="module" src="%PUBLIC_URL%/_dist_/index.js"></script>
