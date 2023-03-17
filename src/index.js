@@ -1,7 +1,4 @@
-/**
- * This file is just a silly example to show everything working in the browser.
- * When you're ready to start on your site, clear the file. Happy hacking!
- **/
+import { registerImage } from "./lazy";
 
 const min = 1;
 const max = 122;
@@ -21,14 +18,13 @@ const createImageNode = () => {
   return container;
 };
 
-const nuevaImagen = createImageNode();
 const mountNode = document.getElementById("images");
-
 const addButton = document.querySelector("button");
 
 const addImage = () => {
   const newImage = createImageNode();
   mountNode.appendChild(newImage);
+  registerImage(newImage);
 };
 
 addButton.addEventListener("click", addImage);
